@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hulumarket - Online Marketing</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    .login-form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    .login-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+    .product-image {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  border-radius: 10px; /* Adds rounded corners to the image */
+}
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to Hulumarket</h1>
+  
+  <button class="button" onclick="showDescription()">About</button>
+  <button class="button" onclick="contactUs()">Contact Us</button>
+  <button class="button" onclick="showLoginForm()">Order Now</button>
+  
+  <div id="loginForm" class="login-form" style="display: none;">
+    <h2>Login</h2>
+    <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
+    <?php if (isset($error)) { ?>
+      <p class="error"><?php echo $error; ?></p>
+    <?php } ?>
+  </div>
+  <div class="product-container">
+  <img src="watches.jpg" alt="Watches" class="product-image">
+  <h3>Watches</h3>
+</div>
+
+<div class="product-container">
+  <img src="sun spray.jpg" alt="Sun Spray" class="product-image">
+  <h3>Sun Spray</h3>
+</div>
+
+<div class="product-container">
+  <img src="shampoo.jpg" alt="Shampoo" class="product-image">
+  <h3>Shampoo</h3>
+</div>
+
+<div class="product-container">
+  <img src="shoes.jpg" alt="Shoes" class="product-image">
+  <h3>Shoes</h3>
+</div>
+
+<div class="product-container">
+  <img src="perfumes.jpg" alt="Perfumes" class="product-image">
+  <h3>Perfumes</h3>
+</div>
+  
+  <script>
+    // JavaScript code
+    function showDescription() {
+      alert("Hulumarket is an online marketing platform that provides marketing services of luxury watches, shoes, perfumes, and various types of electronics at affordable prices.");
+    }
+    
+    function contactUs() {
+      window.location.href = "https://t.me/Wbsq7";
+    }
+    
+    function showLoginForm() {
+      document.getElementById("loginForm").style.display = "block";
+    }
+  </script>
+</body>
+</html>
